@@ -2,4 +2,6 @@ Name: Mattia Sabino Caso
 11017368
 Opdracht 3
 
-https://mattiasabino.github.io/data-processing/
+Link site: http://localhost:8080/barchart.html
+
+Link data source: http://projects.knmi.nl/klimatologie/daggegevens/selectie.cgi
