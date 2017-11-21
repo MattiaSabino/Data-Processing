@@ -39,6 +39,8 @@ var tip = d3.tip()
     .html(function(d) {
         return "<strong>Rainfall:</strong> <span \
                     style='color:red'>" + d.Neerslag + "</span>";
+                    
+
 })    
 
 // Calling the the tip on the chart.

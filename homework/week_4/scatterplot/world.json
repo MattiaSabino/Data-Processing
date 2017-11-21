@@ -1,0 +1,62 @@
+[
+  {
+    "Country": "Qatar",
+    "PPP": 129805,
+    "Life": 78,
+    "Population": 2350549
+  },
+  {
+    "Country": "Luxembourg",
+    "PPP": 102570,
+    "Life": 82,
+    "Population": 543261
+  },
+  {
+    "Country": "Macao",
+    "PPP": 99449,
+    "Life": 84,
+    "Population": 584420
+  },
+  {
+    "Country": "Singapore",
+    "PPP": 86139,
+    "Life": 83,
+    "Population": 5618866
+  },
+  {
+    "Country": "Brunei",
+    "PPP": 79504,
+    "Life": 77,
+    "Population": 428539
+  },
+  {
+    "Country": "Kuwait",
+    "PPP": 71191,
+    "Life": 75,
+    "Population": 3583399
+  },
+  {
+    "Country": "Norway",
+    "PPP": 68410,
+    "Life": 82,
+    "Population": 5142842
+  },
+  {
+    "Country": "United Arab Emirates",
+    "PPP": 67127,
+    "Life": 77,
+    "Population": 9577128
+  },
+  {
+    "Country": "Ireland",
+    "PPP": 65679,
+    "Life": 82,
+    "Population": 4726856
+  },
+  {
+    "Country": "Switzerland",
+    "PPP": 59430,
+    "Life": 83,
+    "Population": 8238610
+  }
+]
