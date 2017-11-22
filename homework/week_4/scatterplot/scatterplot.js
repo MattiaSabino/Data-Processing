@@ -46,9 +46,8 @@ var tip = d3.tip()
     .attr('class', 'd3-tip')
     .offset([-10, 0])
     .html(function(d) {
-        return "<span style='color:blue'>" + d.Country + "</span><strong>: Life Expectation:</strong> <span \
-                    style='color:blue'>" + d.Life + "</span><strong> GPB(PPP):</strong> <span \
-                    style='color:blue'>" + d.PPP + "</span>";
+        return "<span style='color:lightblue'>" + d.Country + "</span><strong>: Population:</strong> <span \
+                    style='color:lightblue'>" + d.Population + "</span>";
 })    
 
 // Calling the the tip on the chart.
