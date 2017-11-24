@@ -18,7 +18,7 @@ var y = d3.scale.linear()
     .range([height, 0]);
 
 // Using a scale function to scale the dots.
-var z = d3.scale.linear()
+var scale_dots = d3.scale.linear()
     .range([25,50])
     
 // Using the 10 colors
@@ -45,7 +45,8 @@ var tip = d3.tip()
     .attr('class', 'd3-tip')
     .offset([-10, 0])
     .html(function(d) {
-        return "<span style='color:lightblue'>" + d.Country + "</span><strong>: Population:</strong> <span \
+        return "<span style='color:lightblue'>" + d.Country +
+                  "</span><strong>: Population:</strong> <span \
                     style='color:lightblue'>" + d.Population + "</span>";
 })    
 
@@ -65,9 +66,14 @@ d3.json("world.json", function(error, data) {
     });  
         
     // Setting the domains for the x, the y and the dots.
-    y.domain([d3.min(data, function(d) { return d.Life;}) - 5, d3.max(data, function(d) { return d.Life;})+5]);                               
-    x.domain([d3.min(data, function(d) { return d.PPP;}) - 10000, d3.max(data, function(d) { return d.PPP;}) + 10000]);
-    z.domain([d3.min(data, function(d) { return d.Population;}), d3.max(data, function(d) { return d.Population;})]);
+    y.domain([d3.min(data, function(d) { return d.Life;}) - 5,
+                   d3.max(data, function(d) { return d.Life;})+5]);                               
+    
+    x.domain([d3.min(data, function(d) { return d.PPP;}) - 10000, 
+                   d3.max(data, function(d) { return d.PPP;}) + 10000]);
+                   
+    scale_dots.domain([d3.min(data, function(d) { return d.Population;}),
+                               d3.max(data, function(d) { return d.Population;})]);
     
     // Creating the x Axis and writing GBP(PPP in $) at the end.
     chart.append("g")
@@ -103,7 +109,7 @@ chart.selectAll(".dot")
         .data(data)
     .enter().append("circle")
         .attr("class", "dot")
-        .attr("r", function(d) {return z(d.Population); })
+        .attr("r", function(d) {return scale_dots(d.Population); })
         .attr("cx", function(d) { return x(d.PPP); })
         .attr("cy", function(d) { return y(d.Life); })
         .style("fill", function(d) { return color(d.Country); }) 
