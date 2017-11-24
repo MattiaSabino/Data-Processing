@@ -13,22 +13,21 @@ var margin = {top: 25, right: 200, bottom: 25, left: 50},
 
 // Using a scale function for the y Axis.
 var x = d3.scale.linear()
-    .range([0, width]); 
-
-    
+    .range([0, width]);    
 var y = d3.scale.linear()
     .range([height, 0]);
 
+// Using a scale function to scale the dots.
 var z = d3.scale.linear()
     .range([25,50])
-  
+    
+// Using the 10 colors
 var color = d3.scale.category10();
   
 // Orienting the x Axis.  
 var xAxis = d3.svg.axis()
     .scale(x)
-    .orient("bottom");
-    
+    .orient("bottom");   
 var yAxis = d3.svg.axis()
     .scale(y)
     .orient("left");
@@ -57,20 +56,20 @@ chart.call(tip);
 // Loading the json file and using 'data' as callback.
 d3.json("world.json", function(error, data) { 
     if (error) throw error;
-
-    data.forEach (function type(d) {       
     
+    // Converting the data from string to number.
+    data.forEach (function type(d) {          
         d.PPP =+ d.PPP
         d.Life =+ d.Life
         d.Population =+ d.Population  
     });  
         
-    // Setting the domains for the x and the y.
+    // Setting the domains for the x, the y and the dots.
     y.domain([d3.min(data, function(d) { return d.Life;}) - 5, d3.max(data, function(d) { return d.Life;})+5]);                               
     x.domain([d3.min(data, function(d) { return d.PPP;}) - 10000, d3.max(data, function(d) { return d.PPP;}) + 10000]);
     z.domain([d3.min(data, function(d) { return d.Population;}), d3.max(data, function(d) { return d.Population;})]);
     
-    // Creating the x Axis and writing Month at the end.
+    // Creating the x Axis and writing GBP(PPP in $) at the end.
     chart.append("g")
         .attr("class", "x axis")
         .attr("transform", "translate(0," + height + ")")
@@ -88,7 +87,7 @@ d3.json("world.json", function(error, data) {
             .style("text-anchor", "end")
             .text("LEGENDA")
       
-    // Creating the y Axis and writing Rainfall (mm) on top.
+    // Creating the y Axis and writing Life expectation (in years) on top.
     chart.append("g")
         .attr("class", "y axis")
         .call(yAxis)
@@ -99,6 +98,7 @@ d3.json("world.json", function(error, data) {
         .style("text-anchor", "end")
         .text("Life Expectation (in years)");       
 
+// Creating the dots and giving the the functions in order to place and scale them
 chart.selectAll(".dot")
         .data(data)
     .enter().append("circle")
@@ -115,13 +115,15 @@ var legend = chart.selectAll(".legend")
     .enter().append("g")
         .attr("class", "legend")
         .attr("transform", function(d, i) { return "translate(0," + i * 20 + ")"; });
-     
+
+// Creating the colors of the legenda.    
 legend.append("rect")
     .attr("x", 900)
     .attr("width", 18)
     .attr("height", 18)
     .style("fill", color);
-
+    
+// Creating the texts of the legenda.
 legend.append("text")
     .attr("x", 890)
     .attr("y", 9)
