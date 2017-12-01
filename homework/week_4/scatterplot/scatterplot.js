@@ -12,8 +12,10 @@ var margin = {top: 25, right: 200, bottom: 25, left: 50},
       height = 600 - margin.top - margin.bottom;
 
 // Using a scale function for the y Axis.
-var x = d3.scale.linear()
-    .range([0, width]);    
+var x = d3.scale.ordinal()
+    .rangeRoundBands([0, width], .1);   
+
+    
 var y = d3.scale.linear()
     .range([height, 0]);
 
@@ -27,7 +29,9 @@ var color = d3.scale.category10();
 // Orienting the x Axis.  
 var xAxis = d3.svg.axis()
     .scale(x)
-    .orient("bottom");   
+    .orient("bottom");  
+
+    
 var yAxis = d3.svg.axis()
     .scale(y)
     .orient("left");

@@ -13,7 +13,8 @@ var margin = {top: 25, right: 100, bottom: 25, left: 50},
 // Using a scale function for the y Axis.
 var x = d3.scale.ordinal()
     .rangeRoundBands([0, width], .1);              
-var y = d3.scale.linear()
+
+    var y = d3.scale.linear()
     .range([height, 0]);
   
 // Orienting the x Axis.  
@@ -66,6 +67,11 @@ d3.json("neerslag.json", function(error, data) {
             .attr("transform", function(d) { 
                                     return "translate(" + 
                                     x(d.Maand) + ", 0)"; });
+            
+            
+            
+            
+            
             
     // Creating the rectangles giving it the tip functions.
     bar.append("rect")

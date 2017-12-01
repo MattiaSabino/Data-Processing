@@ -1,0 +1,32 @@
+/*  Mattia Sabino Caso
+** 11017368
+**
+** Data-processing.
+** Graaf met 6 lijnen die de min, max en gemiddelde
+** neerslag aangeven in de Bilt in de jaren 2012
+** en 2013.
+*/
+
+.axis text {
+    font: 15px sans-serif;
+}
+
+.axis path,
+.axis line {
+  fill: none;
+  stroke: #000;
+  shape-rendering: crispEdges; /* Thin lines of the axis  */
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  

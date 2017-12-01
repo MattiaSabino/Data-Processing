@@ -1,0 +1,40 @@
+<!-- Mattia Sabino Caso
+---- 11017368
+----
+---- Graaf met 6 lijnen die de min, max en gemiddelde
+---- neerslag aangeven in de Bilt in de jaren 2012
+---- en 2013.
+-->
+  
+<!DOCTYPE html>
+<html>
+<head>
+    <h1>Neerslag in de Bilt 2012 vs 2013</h1>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="line.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://d3js.org/d3.v3.min.js">></script>
+    <script src="https://labratrevenge.com/d3-tip/javascripts/d3.tip.v0.6.3.js"></script>
+    
+</head>
+<body>
+    <meta charset="utf-8">
+		<div class = "Line graph"></div>
+        <script src="line.js"></script>
+    <div class="dropdown">
+        <button class="btn btn-primary dropdown-toggle" id="menu1" type="button" data-toggle="dropdown">Kies jaar
+        <span class="caret"></span></button>
+        <ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
+            <li class= "2001" role="presentation"><a role="menuitem" tabindex="-1" href="#">2012</a></li>
+            <li class = "2000" role="presentation"><a role="menuitem" tabindex="-1" href="#">2013</a></li>   
+        </ul>
+    </div>
+</body>
+<footer>
+    <h4> Mattia Sabino Caso, 11017368 </h4>
+    <article>
+        <a href="http://projects.knmi.nl/klimatologie/daggegevens/selectie.cgi">Bron: KNMI</a>  
+    </article>
+</footer>
+</html>
