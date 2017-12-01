@@ -170,7 +170,7 @@ d3.json("Neerslag.json", function(error, data) {
         .attr("class", "y2")  
         .attr("id", 'lijn2')        
         .style("fill", "none")                             
-        .style("stroke", "blue")                           
+        .style("stroke", "black")                           
         .attr("r", 5);
     
     focus.append("text")
@@ -208,7 +208,7 @@ d3.json("Neerslag.json", function(error, data) {
         .attr("class", "y5")  
         .attr("id", 'lijn1')        
         .style("fill", "none")                             
-        .style("stroke", "blue")                           
+        .style("stroke", "black")                           
         .attr("r", 5);
 
     focus.append("text")
