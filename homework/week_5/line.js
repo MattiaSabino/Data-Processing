@@ -95,10 +95,6 @@ d3.json("Neerslag.json", function(error, data) {
                  return d.Maand; }));
     y.domain([0, d3.max(data, function(d) { 
                  return Math.max(d.Min2012, d.Max2012); })]);
-    
-    // Tellers om bij te houden hoe vaak er op de dropdown geklikt wordt.
-    var teller2013 = 0;
-    var teller2012 = 0;
 
     // Als het dropdown menu wordt aangeklikt.
     d3.selectAll(".dropdown-menu li a").on("click", function() {
@@ -328,35 +324,17 @@ d3.json("Neerslag.json", function(error, data) {
    };    
 
     // Als 2013 wordt geklikt
-    if (d3.select(this).text() == 2013) 
-        {   
-            teller2013 = teller2013 + 1;
-            teller2012 = 0;
-            d3.selectAll(".lijn2").remove();
-            d3.selectAll("#lijn2").remove()
-
-            if (teller2013 % 2 == 0)
-                {
-                    d3.selectAll(".lijn2").remove();
-                    d3.selectAll("#lijn2").remove()
-                }    
-        }
+    if (d3.select(this).text() == 2013) {   
+        d3.selectAll(".lijn2").remove();
+        d3.selectAll("#lijn2").remove()
+    }
 
     // Als 2012 wordt aangeklikt.
-    if (d3.select(this).text() == 2012) 
-        {
-            teller2012 = teller2012 + 1;
-            teller2013 = 0;
-            d3.selectAll(".lijn1").remove();
-            d3.selectAll("#lijn1").remove()
-               
-            if (teller2012 % 2 == 0)
-                { 
-                    d3.selectAll(".lijn1").remove();
-                    d3.selectAll("#lijn1").remove()
-                }
-        }
-     })      
+    if (d3.select(this).text() == 2012) {
+        d3.selectAll(".lijn1").remove();
+        d3.selectAll("#lijn1").remove()
+    }
+})      
         
    // Maakt de xaxis.
     svg.append("g")
