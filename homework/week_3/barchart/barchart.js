@@ -82,6 +82,9 @@ d3.json("neerslag.json", function(error, data) {
         .on('mouseover', tip.show)
         .on('mouseout', tip.hide);  
 
+        
+        
+        
     // Creating the x Axis and writing Month at the end.
     chart.append("g")
         .attr("class", "x axis")

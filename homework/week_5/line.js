@@ -362,4 +362,5 @@ d3.json("Neerslag.json", function(error, data) {
         .style("text-anchor", "end")
         .text("Neerslag (in mm)")   
 });
+
 $('.dropdown-toggle').dropdown();
