@@ -1,0 +1,74 @@
+[
+  {
+    "Provincie": "Drenthe",
+    "Michelin3": 0,
+    "Michelin2": 1,
+    "Michelin1": 1
+  },
+  {
+    "Provincie": "Flevoland",
+    "Michelin3": 0,
+    "Michelin2": 0,
+    "Michelin1": 0
+  },
+  {
+    "Provincie": "Friesland",
+    "Michelin3": 0,
+    "Michelin2": 0,
+    "Michelin1": 3
+  },
+  {
+    "Provincie": "Gelderland",
+    "Michelin3": 1,
+    "Michelin2": 1,
+    "Michelin1": 6
+  },
+  {
+    "Provincie": "Groningen",
+    "Michelin3": 0,
+    "Michelin2": 0,
+    "Michelin1": 2
+  },  
+  {
+    "Provincie": "Limburg",
+    "Michelin3": 0,
+    "Michelin2": 1,
+    "Michelin1": 8
+  },
+  {
+    "Provincie": "Noord-Brabant",
+    "Michelin3": 0,
+    "Michelin2": 2,
+    "Michelin1": 14
+  },
+  {
+    "Provincie": "Noord-Holland",
+    "Michelin3": 0,
+    "Michelin2": 6,
+    "Michelin1": 22
+  },
+  {
+    "Provincie": "Overijssel",
+    "Michelin3": 1,
+    "Michelin2": 1,
+    "Michelin1": 3
+  },
+  {
+    "Provincie": "Utrecht",
+    "Michelin3": 0,
+    "Michelin2": 0,
+    "Michelin1": 9
+  },
+  {
+    "Provincie": "Zeeland",
+    "Michelin3": 1,
+    "Michelin2": 0,
+    "Michelin1": 7
+  },
+  {
+    "Provincie": "Zuid-Holland",
+    "Michelin3": 0,
+    "Michelin2": 3,
+    "Michelin1": 12
+  }
+]
