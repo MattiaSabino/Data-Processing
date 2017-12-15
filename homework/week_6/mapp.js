@@ -4,6 +4,7 @@
 ** Data-processing.
 ** 
 */
+
 window.onload = function() {
         var div = d3.select("body").append("div")
         .attr("class", "tooltip")
@@ -33,7 +34,7 @@ window.onload = function() {
             margin.top + ")"); 
      
      // Appending a scg path of the Netherlands.
-    d3.xml("testt.svg").mimeType("image/svg+xml").get(function(error, xml) {
+    d3.xml("map.svg").mimeType("image/svg+xml").get(function(error, xml) {
         if (error) throw error;
         document.body.appendChild(xml.documentElement);
                  
@@ -48,11 +49,7 @@ window.onload = function() {
         .await(datasets)
         
     function datasets(error, michelin, michelinTotaal) { 
-        
-        console.log(michelinTotaal)
-        console.log(michelin)
-        
-        
+
         var array = []
         michelin.forEach(function(m){
         
@@ -61,15 +58,12 @@ window.onload = function() {
         m.Michelin3 =+ m.Michelin3
         array.push(m.Provincie)
         });
-        
-        
-        
+
         var array2 = []
         michelinTotaal.forEach(function(t){
         t.MichelinTotaal += t.MichelinTotaal
         array2.push(t.Provincie)   
         });
-
 
         // Setting the domains for the x and the y.
         y.domain([0, d3.max(michelinTotaal, function(t) {return t.MichelinTotaal + 5;})]);
@@ -83,9 +77,7 @@ window.onload = function() {
                 .attr("transform", function(t) {
                                         return "translate(" + 
                                         x(t.Provincie) + ", 0)"; })
-
-                                        
-                                        
+              
         // Creating the rectangles giving it the tip functions.
         bar.append("rect")
             .attr("y", function(t) { return y(t.MichelinTotaal);})
@@ -93,8 +85,6 @@ window.onload = function() {
             .attr("width", x.bandwidth())
             .attr("id", function(t) {return t.Provincie})
             .style("fill","lightblue")
-      
-      
       
         // Creating the x Axis and writing Provincies at the end.
         chart.append("g")
@@ -109,7 +99,6 @@ window.onload = function() {
             .style("text-anchor", "end")
             .text("Provincies")
 
-        
         // Creating the y Axis and writing Michelinsterren on top.
         chart.append("g")
             .attr("class", "y axis")
@@ -135,7 +124,6 @@ window.onload = function() {
             d3.select("#" + z.ID)
                 .style("fill", "blue")
         });
-        
        
         // On mouseover hover in the barchart.
         d3.selectAll("#prov rect").on('mouseover', function() {   
@@ -145,7 +133,6 @@ window.onload = function() {
             d3.select(this).style("fill", "lightblue");
         });  
 
-        
         // If a province is clicked then:
         provincies.on('click', function() {
             
@@ -156,7 +143,6 @@ window.onload = function() {
             var z = michelinTotaal[array2.indexOf(d3.select(this).attr("title"))];
             var h = michelin[array.indexOf(d3.select(this).attr("title"))];
            
-            
             // Make a pop up with the data of that province.
             d3.select("#" + h.Provincie)
                 .style("fill", "blue")
