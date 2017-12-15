@@ -10,7 +10,7 @@ window.onload = function() {
         .attr("class", "tooltip")
         .style("opacity", 0);
 
-    var margin = {top: 30, right: 100, bottom: 100, left: 0},
+    var margin = {top: 30, right: 100, bottom: 100, left: 40},
           width = 900 
           height = 500
 

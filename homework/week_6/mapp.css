@@ -7,17 +7,7 @@
 ** en 2013.
 */
 
-.content {
-    max-width: 500px;
-    display: block;
-    margin: auto;
-}
 
-.land {
-    max-width: 500px;
-    display: block;
-    margin: auto;
-}
 
 .tooltip {
     position: absolute;
