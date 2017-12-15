@@ -1,0 +1,62 @@
+[
+  {
+    "Provincie": "Drenthe",
+    "MichelinTotaal": 2,
+    "ID": "NL-DR"
+  },
+  {
+    "Provincie": "Flevoland",
+    "MichelinTotaal": 0,
+    "ID": "NL-FL"
+  },
+  {
+    "Provincie": "Friesland",
+    "MichelinTotaal": 3,
+    "ID": "NL-FR"
+  },
+  {
+    "Provincie": "Gelderland",
+    "MichelinTotaal": 8,
+    "ID": "NL-GE"
+  },
+  {
+    "Provincie": "Groningen",
+    "MichelinTotaal": 2,
+    "ID": "NL-GR"
+  },  
+  {
+    "Provincie": "Limburg",
+    "MichelinTotaal": 9,
+    "ID": "NL-LI"
+  },
+  {
+    "Provincie": "Noord-Brabant",
+    "MichelinTotaal": 16,
+    "ID": "NL-NB"
+  },
+  {
+    "Provincie": "Noord-Holland",
+    "MichelinTotaal": 28,
+    "ID": "NL-NH"
+  },
+  {
+    "Provincie": "Overijssel",
+    "MichelinTotaal": 5,
+    "ID": "NL-OV"
+  },
+  {
+    "Provincie": "Utrecht",
+    "MichelinTotaal": 9,
+    "ID": "NL-UT"
+  },
+  {
+    "Provincie": "Zeeland",
+    "MichelinTotaal": 8,
+    "ID": "NL-ZE"
+  },
+  {
+    "Provincie": "Zuid-Holland",
+    "MichelinTotaal": 15,
+    "ID": "NL-NH"
+  }
+]
