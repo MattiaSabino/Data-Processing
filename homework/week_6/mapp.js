@@ -52,7 +52,6 @@ window.onload = function() {
 
         var array = []
         michelin.forEach(function(m){
-        
         m.Michelin1 =+ m.Michelin1
         m.Michelin2 =+ m.Michelin2
         m.Michelin3 =+ m.Michelin3
@@ -115,7 +114,7 @@ window.onload = function() {
         // When a bar is clicked fill it blue.
         d3.selectAll("#prov rect").on('click', function() {
             
-            d3selectAll(".land")
+            d3.selectAll(".land")
                 .style("fill", "lightblue")
             
             var z = michelinTotaal[array2.indexOf(d3.select(this).attr("id"))];
