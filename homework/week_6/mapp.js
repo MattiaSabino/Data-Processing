@@ -114,6 +114,9 @@ window.onload = function() {
         // When a bar is clicked fill it blue.
         d3.selectAll("#prov rect").on('click', function() {
             
+            d3.select(this)
+                .style("fill", "blue")
+            
             d3.selectAll(".land")
                 .style("fill", "lightblue")
             
@@ -122,6 +125,12 @@ window.onload = function() {
             // Color the province blue in the map.
             d3.select("#" + z.ID)
                 .style("fill", "blue")
+                
+            div.transition()		
+                .duration(200)		
+                .style("opacity", .8)
+            div.html(z.Provincie.bold() + "<br/>" + "Totaal aantal Michelin Sterren: " + z.MichelinTotaal)	
+                .style("left", (d3.event.pageX) + "px")	
         });
        
         // On mouseover hover in the barchart.
@@ -139,7 +148,7 @@ window.onload = function() {
             d3.selectAll("rect")
                 .style("fill", "lightblue")
             
-            var z = michelinTotaal[array2.indexOf(d3.select(this).attr("title"))];
+           
             var h = michelin[array.indexOf(d3.select(this).attr("title"))];
            
             // Make a pop up with the data of that province.
