@@ -114,12 +114,15 @@ window.onload = function() {
         // When a bar is clicked fill it blue.
         d3.selectAll("#prov rect").on('click', function() {
             
-            d3.select(this)
-                .style("fill", "blue")
+            d3.selectAll("rect")
+                .style("fill", "lightblue")
             
             d3.selectAll(".land")
                 .style("fill", "lightblue")
             
+            d3.select(this)
+                .style("fill", "blue")
+
             var z = michelinTotaal[array2.indexOf(d3.select(this).attr("id"))];
 
             // Color the province blue in the map.
@@ -147,8 +150,10 @@ window.onload = function() {
             // Make the rect of that province blue.
             d3.selectAll("rect")
                 .style("fill", "lightblue")
+                
+            d3.selectAll(".land")
+                .style("fill", "lightblue")
             
-           
             var h = michelin[array.indexOf(d3.select(this).attr("title"))];
            
             // Make a pop up with the data of that province.
